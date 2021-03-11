@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Responder Check List</title>
+    <script >
+    function chequear() {
+        var checkboxes = document.getElementById("form1").checkbox;
+        var div = document.getElementById("contenedor");
+        var cont = 0;
+		document.getElementById("contenedor").innerHTML = '';
+    
+        for (var x = 0; x < checkboxes.length; x++) {
+            if (checkboxes[x].checked) {
+                cont = cont + 1;
+            }  
+        }
+             if (cont==0){
+                 alert ("Debe seleccionar un campo");
+             }
+        
+        var ul = document.createElement("ul")
+        
+        for (let x = 0; x < checkboxes.length; x++) {
+            if (checkboxes[x].checked) {
+				
+                var li = document.createElement("li")
+				var p = document.createElement("p")
+                p.appendChild(document.createTextNode(checkboxes[x].value))
+                li.appendChild(p)
+                ul.appendChild(li)
+                div.appendChild(ul)
+                document.body.appendChild(div)
+                console.log(checkboxes[x].value)
+    
+            }
+    
+    
+        }
+		
+    }
+    
+        </script>
+
+</head>
+
+<body>
+    <header class="cabecera">
+
+        <br>
+        <h1>Responder Checklist</h1>
+        <br>
+    </header>
+    <br>
+        <nav class="navegacion">
+            <br>
+            <ul>
+                <li><a href=index.html>Inicio</a></li>
+                <br>
+                <li><a href="listadovisitas.html">Lista de visitas</a></li>
+                <br>
+                <li><a href=contacto.html>Contacto</a></li>
+            </ul>
+            <br>
+        </nav>
+    <br>
+    <br>
+   
+
+    <form id="form1" method="post" action="#">
+        <input type="checkbox" name="checkbox" id="chk1" value="Revisar extintores OK"><label for="chk1">Revisar extintores</label><br>
+        <br>
+        <input type="checkbox" name="checkbox" id="chk2" value="Revisar letrero salida emergencia OK"><label for="chk2">Revisar letrero salida emergencia</label><br>
+        <br>
+        <input type="checkbox" name="checkbox" id="chk3" value="Delimitar zona de circulacion OK"><label for="chk3">Delimitar zona de circulacion</label><br>
+        <br>
+      
+
+        <input type="button" name="Submit" value="chequear" onClick="chequear();">
+        <br>
+    </form>
+
+     <div id="contenedor"></div>
+
+</body>
+</html>

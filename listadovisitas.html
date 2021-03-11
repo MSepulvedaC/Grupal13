@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de visitas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script languaje="JavaScript" >
+
+      function validar(b) {
+          var a = confirm("¿Desea validar y modificar los chequeos de esta visita?")
+          if (a == true) {
+
+             open("responderchecklist.html","responder checklist");
+             
+          } 
+
+      }
+  </script>
+</head>
+
+<body>
+     
+        
+    <header class="cabecera">
+        
+        <br>
+        <h1>Lista de visitas</h1>
+        <br>
+    </header>
+    <br>
+    <nav class="navegacion">
+        <br>
+        <ul>
+          <li><a href=index.html>Inicio</a></li>
+          <br>
+          <li><a href=contacto.html>Contacto</a></li>
+          <br>
+          </ul>
+        <br>
+    </nav>
+    <br>
+    <main class="principal">
+        <br>
+        
+        <table style="margin: auto;" border="1">
+         <caption>Lista de visitas</caption>
+            <tr>
+             
+              <th>ID visita</th>                                         
+              <th>Fecha</th>                                       
+              <th>Hora</th>
+              <th>RUT del cliente</th>  
+              <th>Nombre del cliente</th>                                          
+            </tr>
+            <tr>
+              <td>1</td>                                         
+              <td>01-01-2021</td>                                       
+              <td>13:00</td>
+              <td>11111111-1</td>  
+              <td>Radomiro Tomic</td>
+              <td> <a onclick="validar(1)" title="validar chequeos" href="#"><img src="https://www.clipartkey.com/mpngs/b/266-2666568_video-game-clipart-free.png" alt="validar chequeos" width="24" height="24" ></a></td>
+            </tr>
+            <tr>
+              <td>2</td>                                         
+              <td>02-02-2021</td>                                       
+              <td>12:00</td>
+              <td>12222222-K</td>  
+              <td>Patricio Fredes</td>
+              <td> <a onclick="validar(2)" title="validar chequeos" href="#"><img src="https://www.clipartkey.com/mpngs/b/266-2666568_video-game-clipart-free.png" alt="validar chequeos" width="24" height="24" /></a></td>
+            </tr>
+            <tr>
+              <td>3</td>                                         
+              <td>03-03-2021</td>                                       
+              <td>15:00</td>
+              <td>15555555-0</td>  
+              <td>Tomaso Albinoni</td>
+              <td> <a onclick="validar(3)" title="validar chequeos" href="#"><img src="https://www.clipartkey.com/mpngs/b/266-2666568_video-game-clipart-free.png" alt="validar chequeos" width="24" height="24" /></a></td>
+            </tr>
+            <tr>   
+        </table>
+        
+         
+      
+    </main>
+    <br>
+    
+    <footer class="pie">
+® Derechos reservados 2021
+    </footer>
+    
+        
+</body>
+</html>

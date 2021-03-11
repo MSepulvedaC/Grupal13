@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear pago</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script languaje="Javascript" src="Script.js"></script>
+  
+</head>
+
+<body class="body1 body2" onload="datos()" >
+     
+        
+    <header class="cabecera">
+        
+        <br>
+        <h1>Formulario para crear pagos</h1>
+        <br>
+    </header>
+    <br>
+    <nav class="navegacion">
+        <br>
+        <ul>
+            
+            
+            <li><a href=index.html>Inicio</a></li>
+            <br>
+            <li><a href=listadopago.html>Lista de pagos</a></li>
+            <br>
+            <li><a href=contacto.html>Contacto</a></li>
+            <br>
+        </ul>
+        <br>
+    </nav>
+    <br>
+    <main class="principal">
+        <br>
+        <form >
+            <ul>
+            <li >
+               <div>
+               
+                <label  for="monto">Monto del pago</label>
+                <input style='margin-left: 45px;' type="number" min="0" max="99999999" id="monto" name="ingreso_monto"  required > 
+                    
+               </div>
+            </li>
+            <br>
+            <li>
+                <label for="mes">Mes pago</label>
+                
+                <select name="mes" id="mes" required>
+                    <option value=""></option>
+                    <option value="Enero">Enero</option>
+                    <option value="Febrero">Febrero</option>
+                    <option value="Marzo">Marzo</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Mayo">Mayo</option>
+                    <option value="Junio">Junio</option>
+                    <option value="Julio">Julio</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Septiembre">Septiembre</option>
+                    <option value="Octubre">Octubre</option>
+                    <option value="Noviembre">Noviembre</option>
+                    <option value="Diciembre">Diciembre</option>
+                    
+                </select> </li>
+            <br>
+            
+            <li>
+                <label for="an">Año pago</label>
+                
+                <select name="anio" id="an" onclick ="combo2()" required>
+                    <option value=""></option>
+                </select>
+            </li>
+            <br>
+            <li>
+                <label for="rutc">RUT cliente</label>
+                <input style='margin-left: 15px;' type="text" id="rutc" name="ingreso_RUTc" required>
+            </li>
+            <br>
+            <li>
+                <label for="fechac">Fecha actual</label>
+                <input type="text" id="fechac" name="ingreso_Fechac" readonly >
+            </li>
+            </ul>
+            
+                <button onclick="validapago()" style='margin-left: 240px;' type="submit">Crear pago</button>
+                <br>
+                <br>
+                <br>
+         </form>
+         
+      
+    </main>
+    <br>
+    
+    <footer class="pie">
+® Derechos reservados 2021
+    </footer>
+    
+        
+</body>
+</html>

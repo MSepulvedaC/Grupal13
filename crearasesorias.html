@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Asesorias</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script languaje="Javascript" src="script8.js"></script>
+</head>
+<body>
+     
+        
+    <header class="cabecera">
+
+        <br>
+        <h1>Formulario para crear Asesorias</h1>
+        <br>
+    </header>
+    <br>
+        <nav class="navegacion">
+            <br>
+            <ul>
+                <li><a href=index.html>Inicio</a></li>
+                <br>
+                <li><a href=contacto.html>Contacto</a></li>
+            </ul>
+            <br>
+        </nav>
+    <br>
+    <br>
+    <main class="principal">
+        <br>
+        <form >
+            <ul>
+            <li>
+                <label for="cod">Codigo Único</label>
+                <input class="form" type="number" min="1" max=" 10000" id="cod" name="ingreso_cod_unico" required>
+            </li>
+            <br>
+            <li>
+                <label for="fecha_realiz">Fecha de Realización</label>
+                <input class="form" type="date" id="fecha_realiz" name="ingreso_fecha_realizacion"required>
+            </li>
+            <br>
+            <li>
+                <label for="motivo">Motivo</label>
+                <textarea class="form" rows="7" cols="40" id="comment" maxlength="250"></textarea>
+                <div id="contador"></div>
+            </li>
+            <br>
+            <li>
+                <label for="pro">Profesional</label>
+                <select class="form" name="pro" id="pro" required>
+                    <option value=""></option>
+                    <option value="prevencion">Prevencionista</option>
+                    <option value="arquitecto">Arquitecto</option>
+                    <option value="contador">Contador</option>
+                    <option value="ing">Ingeniero</option>
+
+                </select>
+               
+            <br>
+            
+            <button style='margin-left: 50px;'  type="submit">Crear Asesorias</button>
+                <br>
+                <br>
+                <br>
+         </form>
+         
+      
+    </main>
+    <br>
+    
+    <footer class="pie">
+® Derechos reservados 2021
+    </footer>
+    
+        
+</body>
+</html>
